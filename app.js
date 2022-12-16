@@ -19,8 +19,9 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
-/*
+
 app.get("/", (req, res) => { res.render('index') });
+/*
 app.get("/about", (req, res) => { res.render('about') });
 app.get("/work", (req, res) => { res.render('work') });
 app.get("/contact", (req, res) => { res.render('contact') });
