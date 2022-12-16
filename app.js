@@ -9,7 +9,7 @@ dotenv.config();
 conn();
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 //ejs template engine
 app.set('view engine', 'ejs');
@@ -27,7 +27,7 @@ app.get("/contact", (req, res) => { res.render('contact') });
  */
 
 routeManager(app);
-app.listen(process.env.PORT, () => {
-    console.log(`Application running on port ${process.env.PORT}`)
+app.listen(port, () => {
+    console.log(`Application running on port ${port}`)
 
 });
